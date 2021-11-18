@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <td>Username </td>
+        <td>Password</td>
+        <td>Usertype</td>
+
+    </tr>
+    <tr *ngFor="let s of details">
+        <td>{{s.Username}}</td>
+        <td>{{s.Password}}</td>
+        <td>{{s.Usertype}}</td>
+    </tr>
+</table>
+<td><a routerLink="/admin">Exit</a></td>

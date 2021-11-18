@@ -1,0 +1,31 @@
+
+<div class="container">
+    <h1>DETAILS</h1>
+   <label for="Name"><b>Name:</b></label>
+    <input type="text" placeholder="Enter Name"[(ngModel)]="details.Name">
+<br>
+<br>
+    <label for="Date"><b>Date:</b></label>
+    <input type="date" [(ngModel)]="details.Date">
+    <br>
+    <br>
+    <label for="Particular"><b>Particular:</b></label>
+    <input type="text" placeholder="Enter Particular" [(ngModel)]=" details.Particular">
+    <br>
+    <br>
+    <label for="Amount"><b>Amount:</b></label>
+    <input type="text" placeholder="Enter Amount"  [(ngModel)]="details.Amount">
+    <br>
+    <br>
+    <label for="Particulartype"><b>Particulartype:</b></label>
+    
+    <input type="radio" name="x" [(ngModel)]=" details.Type" value="true">INCOME
+    <input type="radio" name="x" [(ngModel)]=" details.Type" value="false">EXPENSE
+    <br>
+    <br>
+   <label for="File"></label>
+   <input type="file"[(ngModel)]="details.File">
+   <br>
+   <br>
+   <input type="button" value="ADD" (click)="add()">
+  </div>

@@ -1,0 +1,32 @@
+<table>
+    <tr>
+        <td>
+            Username<input type="text"[(ngModel)]="User1.Username">
+
+        </td>
+    </tr>
+     <!-- <tr>
+        <td>
+            Id<input type="number"[(ngModel)]="User1.Id">
+
+        </td>
+    </tr>  -->
+    <tr>
+        <td>
+            Password<input type="text"[(ngModel)]="User1.Password">
+            
+        </td>
+    </tr>
+    <tr>Usertype
+        <select id="Usertype"name="Usertype" [(ngModel)]="User1.Usertype">
+            
+            <option value="User">User</option>
+        </select>
+    </tr>
+    <tr>
+        <td>
+            Add<input type="button"value="Add"(click)="Add()">
+            
+        </td>
+    </tr>
+</table>

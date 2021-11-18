@@ -1,0 +1,40 @@
+<h1 align="center" >{{"Welcome  " +d.Details.Username}}</h1>
+
+<ul>
+    <li><a>Home</a></li>
+
+    <li><a routerLink="Userdetails" (click)="Userdetails()">Userdetails</a></li>
+    <li><a routerLink="Adduser" *ngIf="Useris" (click)="Adduser()">Adduser</a></li>
+    <li style="float:right"><a class="active" (click)="Logout()">Logout</a></li><br>
+    <li style="color:white;"> Search<input type="textsearch" [(ngModel)]="textsearch"></li>
+</ul>
+<h2>Customer Details</h2>
+<table border="1" width=50%>
+    <tr>
+        <td>Name</td>
+        <td>Date</td>
+        <td>Particular</td>
+        <td>Income</td>
+        <td>Expense</td>
+        <td>File</td>
+
+    </tr>
+    <tr *ngFor="let s of Transaction1| data:textsearch ">
+        <td>{{s.Name}}</td>
+        <td>{{s.Date}}</td>
+        <td>{{s.Particular}}</td>
+        <td><span *ngIf="s.Type=='true'">{{s.Amount}}</span></td>
+        <td><span *ngIf="s.Type=='false'">{{s.Amount}}</span></td>
+        <td>{{s.File}}</td>
+    </tr>
+
+    <tr>
+        <td>TOTAL</td>
+        <td></td>
+        <td>-</td>
+        <td>{{this.totalincome}}</td>
+        <td>{{this.totalexpense}}</td>
+    </tr>
+
+
+</table>
